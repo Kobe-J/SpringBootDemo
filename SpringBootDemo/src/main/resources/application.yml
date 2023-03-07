@@ -1,0 +1,24 @@
+server:
+  port: 8899
+
+logging:
+  path: logs
+  file: mylog.log
+
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  application:
+    name: report
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC
+    username: root
+    password: root
+
+mybatis:
+  type-aliases-package: com.user.model
+  mapper-locations:
+    - mapper/*
